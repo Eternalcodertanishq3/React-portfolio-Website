@@ -1,19 +1,17 @@
-
-
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
+
+
 body {
-    background: rgb(8, 27, 41);
-    color: white;
+    color: #ededed;
+    background: #081b29;
 }
 
 .header {
@@ -110,9 +108,91 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+
+
+.button-box a:hover {
+    color: #00abf0;
 }
 
 .button-box a:nth-child(2) {
     background: transparent;
     color: #00abf0;
+}
+
+.button-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.button-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.button-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.button-box a:hover:before {
+    width: 100%;
+
+}
+
+.Home-scifi {
+    position:absolute;
+    width: 230px;
+    bottom: 50px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Home-scifi a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 45%;
+    font-size: 20px;
+    text-decoration: none;
+    justify-content: center;
+    color: #00abf0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.Home-scifi a:hover {
+    color: #081b29;
+}
+
+.Home-scifi a::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: #00abf0;
+    top: 0;
+    left: 0;
+    width: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.Home-scifi a:hover::before {
+    width: 100%;
 }
